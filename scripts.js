@@ -121,7 +121,7 @@ updateButton.addEventListener('click', () => {
         const moveItem = document.createElement('li');
         moveItem.textContent = move;
         movesElement.appendChild(moveItem);
-    })
+    });
 
     const hdElement = document.getElementById('hp');
     hdElement.textContent = classData.hitDice;
@@ -130,7 +130,12 @@ updateButton.addEventListener('click', () => {
     armorElement.textContent = classData.armor;
 
     const savingThrowsElement = document.getElementById('saving-throws');
-    savingThrowsElement.textContent = classData.savingThrows.join(', ');
+    savingThrowsElement.innerHTML = '';
+    classData.savingThrows.forEach(sThrow => {
+        const savingThrow = document.createElement('li');
+        savingThrow.textContent = sThrow;
+        savingThrowsElement.appendChild(savingThrow);
+    });
 
     const equipmentElement = document.getElementById('gear');
     equipmentElement.innerHTML = '';
