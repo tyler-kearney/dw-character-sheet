@@ -8,85 +8,87 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="character-info">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
+    <div class="character-sheet">
+        <div class="character-info">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
 
-        <label for="race">Race</label>
-        <select id="race" class="race">
-            <option value="dwarf">Dwarf</option>
-            <option value="elf">Elf</option>
-            <option value="halfling">Halfling</option>
-            <option value="human">Human</option>
-        </select>
-
-        <label for="class">Class</label>
-        <select id="class" name="class">
-            <option value="barbarian">Barbarian</option>
-            <option value="bard">Bard</option>
-            <option value="cleric">Cleric</option>
-            <option value="druid">Druid</option>
-            <option value="fighter">Fighter</option>
-            <option value="immolator">Immolator</option>
-            <option value="paladin">Paladin</option>
-            <option value="ranger">Ranger</option>
-            <option value="thief">Thief</option>
-            <option value="wizard">Wizard</option>
-        </select>
-
-        <label for="alignment">
-            <select id="alignment" name="alignment">
-                <option value="good">Good</option>
-                <option value="lawful">Lawful</option>
-                <option value="neutral">Neutral</option>
-                <option value="chaotic">Chaotic</option>
-                <option value="evil">Evil</option>
+            <label for="race">Race</label>
+            <select id="race" class="race">
+                <option value="dwarf">Dwarf</option>
+                <option value="elf">Elf</option>
+                <option value="halfling">Halfling</option>
+                <option value="human">Human</option>
             </select>
-        </label>
-    </div>
-    <div class="stats">
-        <table>
-            <tr>
-                <th>STR</th>
-                <th>Dex</th>
-                <th>CON</th>
-                <th>INT</th>
-                <th>WIS</th>
-                <th>CHA</th>
-            </tr>
-            <tr>
-                <td><select id="str"></select></td>
-                <td><select id="dex"></select></td>
-                <td><select id="con"></select></td>
-                <td><select id="int"></select></td>
-                <td><select id="wis"></select></td>
-                <td><select id="cha"></select></td>
-            </tr>
-        </table>
-    </div>
-    <div class="combat">
-        <label for="damage">Damage</label>
-        <input type="text" id="damage" name="damage">
 
-        <label for="armor">Armor</label>
-        <input type="text" id="armor" name="armor">
+            <label for="class">Class</label>
+            <select id="class" name="class">
+                <option value="barbarian">Barbarian</option>
+                <option value="bard">Bard</option>
+                <option value="cleric">Cleric</option>
+                <option value="druid">Druid</option>
+                <option value="fighter">Fighter</option>
+                <option value="immolator">Immolator</option>
+                <option value="paladin">Paladin</option>
+                <option value="ranger">Ranger</option>
+                <option value="thief">Thief</option>
+                <option value="wizard">Wizard</option>
+            </select>
 
-        <label for="hp">HP</label>
-        <input type="number" id="hp" name="hp">
-    </div>
-    <div class="moves"></div>
-    <div class="other">
-        <label for="bonds">Bonds: </label>
-        <textarea id="bonds" name="bonds"></textarea>
+            <label for="alignment">
+                <select id="alignment" name="alignment">
+                    <option value="good">Good</option>
+                    <option value="lawful">Lawful</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="chaotic">Chaotic</option>
+                    <option value="evil">Evil</option>
+                </select>
+            </label>
+        </div>
+        <div class="stats">
+            <table>
+                <tr>
+                    <th>STR</th>
+                    <th>Dex</th>
+                    <th>CON</th>
+                    <th>INT</th>
+                    <th>WIS</th>
+                    <th>CHA</th>
+                </tr>
+                <tr>
+                    <td><select id="str"></select></td>
+                    <td><select id="dex"></select></td>
+                    <td><select id="con"></select></td>
+                    <td><select id="int"></select></td>
+                    <td><select id="wis"></select></td>
+                    <td><select id="cha"></select></td>
+                </tr>
+            </table>
+        </div>
+        <div class="combat">
+            <label for="damage">Damage</label>
+            <input type="text" id="damage" name="damage">
 
-        <label for="gear">Gear: </label>
-        <textarea id="gear" name="gear"></textarea>
+            <label for="armor">Armor</label>
+            <input type="text" id="armor" name="armor">
 
-        <label for="level">Level: </label>
-        <input type="number" id="level" name="level">
+            <label for="hp">HP</label>
+            <input type="number" id="hp" name="hp">
+        </div>
+        <div class="moves"></div>
+        <div class="other">
+            <label for="bonds">Bonds: </label>
+            <textarea id="bonds" name="bonds"></textarea>
 
-        <label for="xp">XP: </label>
-        <input type="number" id="xp" name="xp">
+            <label for="gear">Gear: </label>
+            <textarea id="gear" name="gear"></textarea>
+
+            <label for="level">Level: </label>
+            <input type="number" id="level" name="level">
+
+            <label for="xp">XP: </label>
+            <input type="number" id="xp" name="xp">
+        </div>
     </div>
 
     <script src="scripts.js"></script>
