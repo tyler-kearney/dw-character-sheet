@@ -115,8 +115,13 @@ updateButton.addEventListener('click', () => {
     const classData = classes[selectedClass];
 
     // Remaining functionality for setting class data
-    const movesElement = ducument.getElementById('moves');
-    // TODO: implement remaining logic for updating moves
+    const movesElement = document.getElementById('moves');
+    movesElement.innerHTML = '';
+    classData.moves.forEach(move => {
+        const moveItem = document.createElement('li');
+        moveItem.textContent = move;
+        movesElement.appendChild(moveItem);
+    })
 
     const hdElement = document.getElementById('hp');
     hdElement.textContent = classData.hitDice;
