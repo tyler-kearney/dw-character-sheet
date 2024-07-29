@@ -106,7 +106,7 @@ function handleAbilityChange(event) {
 }
 
 function saveAsTxt() {
-    const txtContent = document.body.textContent();
+    const txtContent = document.body.textContent;
     const blob = new Blob([txtContent]);
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
