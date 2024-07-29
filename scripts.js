@@ -76,6 +76,7 @@ const classes = {
 
 const classSelect = document.getElementById('class');
 const updateButton = document.getElementById('update-button');
+const saveTxtBtn = document.getElementById('save-as-txt');
 
 // Function Declarations
 function populateAbilities() {
@@ -102,6 +103,18 @@ function handleAbilityChange(event) {
             scoreRemove.forEach(option => option.remove());
         }
     });
+}
+
+function saveAsTxt() {
+    const txtContent = document.body.textContent();
+    const blob = new Blob([txtContent]);
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'my-charactersheet.txt';
+    link.click();
+
+    // cleanup
+    URL.revokeObjectURL(link.href);
 }
 
 // Event Listeners
@@ -145,6 +158,8 @@ updateButton.addEventListener('click', () => {
         equipmentElement.appendChild(equipmentItem);
     });
 });
+
+saveTxtBtn.addEventListener('click', saveAsTxt);
 
 // Calls
 populateAbilities();
